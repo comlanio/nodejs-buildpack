@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 # bin/compile <build-dir> <cache-dir> <env-dir>
 
-env
-
 set -e
 set -o pipefail   # don't ignore exit codes when piping output
 set -o nounset    # fail on unset variables
@@ -153,3 +151,4 @@ compile() {
 }
 
 compile $1 $CACHE_DIR $ENV_DIR
+compile $1/filament $CACHE_DIR $ENV_DIR
